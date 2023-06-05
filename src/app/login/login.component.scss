@@ -3,11 +3,80 @@
     margin: 0;
    box-sizing: border-box;
 }
+header{
+  display: flex;
+  flex-direction: column;
+  color: #5A84B1;
+
+
+}
+
 .main_Container{
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 97vh;
     background-image: url(../../assets/loginImg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.form{
+    display: flex;
+    flex-direction: column;
+   margin-top: -48px;
+    margin-left: 50%;
+    height: 100%;
 
 }
+#lastText{
+  margin-left: 76%;
+}
+#subHeading{
+  margin-left: 26%;
+}
+#welcomNote{
+  font-size: 30px;
+  margin-left: 12px;
+}
+#bottomHeading{
+  margin-left: 55%;
+  font-size: xx-large;
+}
+.formTopPart{
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  height: 60%;
+  border-radius: 7px  7px 450px 7px ;
+  margin-top: 6%;
+}
+.formBottomPart{
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  height: 20%;
+  margin-top: 3%;
+  border-radius:120px 7px  7px  7px ;
+  
+}
+button{
+  margin-top: 4%;
+  width: 90%;
+  margin-left: 5%;
+  height: 19%;
+  border-radius:120px ;
+  background-color: #5A84B1;
+  color: #FFFFFF;
+  border: none;
+}
+
+#mainHeading{
+padding-top: 55px;
+font-size: 60px;
+font-weight:bold;
+}
+  
+   
+   
+
