@@ -27,21 +27,24 @@ header{
    margin-top: -48px;
     margin-left: 50%;
     height: 100%;
-
+   
 }
 #lastText{
   margin-left: 76%;
+  color:#a4a3a2;
 }
 #subHeading{
   margin-left: 26%;
+  color:#a4a3a2;
 }
 #welcomNote{
-  font-size: 30px;
+  font-size: 28px;
   margin-left: 12px;
+  margin-top: 5px;
 }
 #bottomHeading{
-  margin-left: 55%;
-  font-size: xx-large;
+  margin-left: 60%;
+  font-size: 28px;
 }
 .formTopPart{
   flex-direction: column;
@@ -61,14 +64,21 @@ header{
   
 }
 button{
-  margin-top: 4%;
+  margin-top: 2%;
   width: 90%;
   margin-left: 5%;
-  height: 19%;
+  height: 25%;
   border-radius:120px ;
   background-color: #5A84B1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   color: #FFFFFF;
   border: none;
+}
+button[disabled] {
+  background-color:#f2f1f1;
+}
+button:not([disabled]) {
+  background-color: #5A84B1;
 }
 
 #mainHeading{
@@ -76,7 +86,35 @@ padding-top: 55px;
 font-size: 60px;
 font-weight:bold;
 }
-  
+.errorMessage {
+  font-size: 12px; 
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    max-width: 90%;
+  }
+
+  .formContent {
+    grid-template-columns: 1fr;
+  }
+
+  #mainHeading {
+    font-size: 24px;
+  }
+
+  #welcomNote {
+    font-size: 16px;
+  }
+
+  #subHeading {
+    font-size: 14px;
+  }
+
+  #bottomHeading {
+    font-size: 14px;
+  }}
    
    
 
