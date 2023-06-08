@@ -4,11 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserDetailsService {
+  getUserDetails() {
+    throw new Error('Method not implemented.');
+  }
   formData = {
     name: '',
+    surname: '',
     email: '',
+    town: '',
+    suburb: '',
+    street: '',
+    code: '',
     password: '',
-    cellPhone: ''
+    confirmPassword: '',
+    phone: ''
   };
+  
   constructor() { }
 }

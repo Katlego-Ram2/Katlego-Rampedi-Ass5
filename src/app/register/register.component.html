@@ -1,1 +1,22 @@
 
+ <table>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th>Cellphone</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone}}</td>
+    </tr>
+  </table>
+  
+  <button (click)="removeRow()">Remove Row</button>
+  
+  
+
+  
+  

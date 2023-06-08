@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <form (submit)="saveData()">
+    <div class="textboxes">
+      <div class="left_textBoxes">
+        <div class="form-group">
+          <input type="text" class="txtB" [(ngModel)]="userDetails.name" placeholder="First Name *" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="txtB" [(ngModel)]="userDetails.surname" name="surname" placeholder="Last Name *" id="lastname" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="txtB" [(ngModel)]="userDetails.password" placeholder="Password *" name="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="txtB" [(ngModel)]="userDetails.confirmPassword" placeholder="Confirm Password *" name="confirmPassword" id="confirmPassword" required>
+        </div>
+      </div>
+
+      <div class="right_textBoxes">
+        <div class="form-group">
+          <input type="email" class="txtB" [(ngModel)]="userDetails.email" name="email" id="email" placeholder="Your Email *" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" class="txtB" [(ngModel)]="userDetails.phone" name="phone" id="phone" placeholder="Your Phone *" required>
+        </div>
+        <div class="form-group">
+          <!-- Add any additional form fields here -->
+        </div>
+      </div>
+    </div>
+
+    <button id="regBtn" type="submit">Register</button>
+  </form>
+</div>
+
