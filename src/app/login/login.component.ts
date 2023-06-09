@@ -53,7 +53,7 @@ export class LoginComponent {
   const userData = usersData.find((user: { email: string; password: string }) => user.email === email);
 
   if (userData && userData.password === password) {
-    this.router.navigate(['register']);
+    this.router.navigate(['regClients']);
     this.errorMessage = '';
   } else {
     this.errorMessage = 'Invalid email or password';

@@ -6,16 +6,16 @@ import { RegClientsComponent } from './reg-clients/reg-clients.component';
 
 const routes: Routes = [
   {
-    path:"",pathMatch:"full",component:LoginComponent
+    path:"",pathMatch:"full",component:RegClientsComponent
+  },
+  {
+    path:"register",component:RegClientsComponent
   },
   {
     path:"login",component:LoginComponent
   },
-  {
-    path:"register",component:RegisterComponent
-  },
 {
-  path:"regClients",component:RegClientsComponent
+  path:"regClients",component:RegisterComponent
 }
 ];
 

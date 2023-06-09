@@ -8,7 +8,9 @@ import { UserDetailsService } from '../user-details.service';
   styleUrls: ['./reg-clients.component.scss']
 })
 export class RegClientsComponent {
-  userDetails: any = {}; // Declare an object to hold user details
+  errorMessage!: string;
+  isFieldTouched: boolean = false;
+  userDetails: any = {}; 
 
   constructor(private router: Router, private userDetailsServce: UserDetailsService) {}
 
@@ -22,26 +24,47 @@ export class RegClientsComponent {
       phone: this.userDetails.phone,
       password: this.userDetails.password
     };
-
+ const confPass =this.userDetails.confirmPassword;
+    const chkEmail=/^\S+@\S+\.\S+$/.test(user.email);
     const users = JSON.parse(localStorage.getItem('users') || '[]');
 
-    // Check if the user exists
-    const existingUser = users.find((u: any) => u.email === this.userDetails.email);
-    if (existingUser) {
-      alert('User already exists. Please log in.');
+    const existingUser = users.find((userD: any) => userD.email === this.userDetails.email);
+    //validation
+    if(!user.name|| !user.surname|| !user.password || !user.phone || !user.email){
+      alert("Empty spaces not allowed");
+      return;
+   
+    }else if(!isNaN(user.name)){
+      alert("Firstname can not be numbers");
+      return;
+    }else if(!isNaN(user.surname)){
+      alert("Lastname can not be numbers");
+      return;
+    } else if(!chkEmail) {
+      alert("invalid email");
+      return;
+    } else if(isNaN(user.phone)|| user.phone.length <10) {
+      alert("invalid cellphone number");
+      return;
+    } else if(confPass!=user.password) {
+      alert("passwords must match");
       return;
     }
-
-    // Add user to the array
+    else if (existingUser) {
+      alert('User already exists. Please log in.');
+      this.router.navigate(['/login']);
+      return;
+      }else{
     users.push(user);
 
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('User registered successfully');
     this.router.navigate(['/login']);
-  }
+  }}
 
   goToLogin() {
     this.router.navigate(['/login']);
   }
+  
 }
