@@ -1,15 +1,13 @@
 <div class="main_body">
   <button (click)="removeRow()">Remove User</button>
   <div class="form_body">
-   
- 
-    
+
     <table>
       <tr>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Email</th>
-        <th>Cellphone</th>
+        <th><b>Name</b></th>
+        <th><b>Surname</b></th>
+        <th><b>Email</b></th>
+        <th><b>Cellphone</b></th>
       </tr>
       <tr *ngFor="let user of users">
         <td>{{ user.name }}</td>
@@ -18,7 +16,7 @@
         <td>{{ user.phone}}</td>
       </tr>
     </table>
-   
+
   </div>
   <a routerLink="/login">Logout</a>
 </div>
