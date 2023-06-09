@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDetailsService } from '../user-details.service';
+import { Route } from '@angular/router';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +9,9 @@ import { UserDetailsService } from '../user-details.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
   users: any[] = [];
+
 
   constructor(private userDetailsService: UserDetailsService) {
    
@@ -20,10 +24,11 @@ export class RegisterComponent implements OnInit {
       this.users = JSON.parse(data);
     }
   }
-
+  
   removeRow(): void {
     if (this.users.length > 1) {
       this.users.pop();
     }
   }
+  
 }
