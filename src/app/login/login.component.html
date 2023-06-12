@@ -10,9 +10,9 @@
       <div style="position: relative; margin-bottom: 20px; margin-left: 4%;margin-top: 12%;">
         <label for="emailInput"
           style="position: absolute; top: -9px; left: 10px; background-color:#FFFFFF; padding: 0 5px; color:#a4a3a2;"
-          [style.color]="getBorderColor(formData.email)">Email*</label>
-        <input type="email" autocomplete="off" id="emailInput" [(ngModel)]="formData.email"
-          [style.border-color]="getBorderColor(formData.email)" (focus)="setFieldTouched(true)"
+          [style.color]="getBorderColor(userData.email)">Email*</label>
+        <input type="email" autocomplete="off" id="emailInput" [(ngModel)]="userData.email"
+          [style.border-color]="getBorderColor(userData.email)" (focus)="setFieldTouched(true)"
           (blur)="setFieldTouched(false)"
           style="border: 1px solid #ccc;background-color: #ccc; padding: 8px; width: 620px; border-radius: 4px; background-color: white;border-radius: 55px  0% 450px 55px ;">
         <div class="errorMessage" *ngIf="errorMessage">{{ errorMessage }}</div>
@@ -21,8 +21,8 @@
       <div style="position: relative; margin-bottom: 20px;margin-left: 4%;">
         <label for="passwordInput"
           style="position: absolute; top: -9px; left: 10px; background-color: white; padding: 0 5px; color:#a4a3a2;"></label>
-        <input type="password" name="pass" autocomplete="off" [(ngModel)]="formData.password"
-          [style.border-color]="getBorderColor(formData.password)" id="password"
+        <input type="password" name="pass" autocomplete="off" [(ngModel)]="userData.password"
+          [style.border-color]="getBorderColor(userData.password)" id="password"
           style="border: 1px solid #ccc; padding: 8px; width: 620px; border-radius: 4px; background-color:#FFFFFF;border-radius: 55px  0% 450px 55px ;">
         <div class="errorMessage" *ngIf="errorMessage !== ''">{{ errorMessage }}</div>
       </div>

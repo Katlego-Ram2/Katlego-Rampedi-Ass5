@@ -13,8 +13,8 @@ export class LoginComponent {
 
 
   constructor(private userDetails: UserDetailsService, private router: Router) { }
-  get formData() {
-    return this.userDetails.formData;
+  get userData() {
+    return this.userDetails.userData;
   }
 
 
@@ -27,7 +27,7 @@ export class LoginComponent {
   }
 
   get isFormValid(): boolean {
-    return this.formData.email.trim() !== '' && this.formData.password.trim() !== '';
+    return this.userData.email.trim() !== '' && this.userData.password.trim() !== '';
   }
   
   getBorderColor(fieldValue: string): string {
@@ -41,8 +41,8 @@ export class LoginComponent {
   }
   checkCredentials() {
 
-    const email = this.formData.email;
-    const password = this.formData.password;
+    const email = this.userData.email;
+    const password = this.userData.password;
 
     const usersData = JSON.parse(localStorage.getItem('users') || '[]');
     const userData = usersData.find((user: { email: string; password: string }) => user.email === email);

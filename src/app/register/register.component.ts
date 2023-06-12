@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Retrieve data from local storage
+   
     const data = localStorage.getItem('users');
     if (data) {
       this.users = JSON.parse(data);
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   }
   
   removeRow(): void {
-    if (this.users.length > 1) {
+    if (this.users.length > 0) {
       this.users.pop();
     }
   }
