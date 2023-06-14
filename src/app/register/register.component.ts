@@ -30,5 +30,12 @@ export class RegisterComponent implements OnInit {
       this.users.pop();
     }
   }
+  removeRow1(user: any) {
+    // Remove the selected user from the users array
+    const index = this.users.indexOf(user);
+    if (index !== -1) {
+      this.users.splice(index, 1);
+    }
+  }
   
 }
